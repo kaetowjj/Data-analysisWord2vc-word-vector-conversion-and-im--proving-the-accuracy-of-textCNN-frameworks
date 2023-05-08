@@ -1,0 +1,86 @@
+2021-05-05 21:04:56,823:INFO: collecting all words and their counts
+2021-05-05 21:04:56,825:INFO: PROGRESS: at sentence #0, processed 0 words, keeping 0 word types
+2021-05-05 21:04:56,833:INFO: collected 3885 word types from a corpus of 28806 raw words and 3 sentences
+2021-05-05 21:04:56,833:INFO: Loading a fresh vocabulary
+2021-05-05 21:04:56,837:INFO: effective_min_count=5 retains 683 unique words (17% of original 3885, drops 3202) 
+2021-05-05 21:04:56,837:INFO: effective_min_count=5 leaves 23968 word corpus (83% of original 28806, drops 4838)
+2021-05-05 21:04:56,840:INFO: deleting the raw counts dictionary of 3885 items
+2021-05-05 21:04:56,840:INFO: sample=0.001 downsamples 61 most-common words
+2021-05-05 21:04:56,840:INFO: downsampling leaves estimated 14466 word corpus (60.4% of prior 23968)
+2021-05-05 21:04:56,842:INFO: estimated required memory for 683 words and 200 dimensions: 1434300 bytes
+2021-05-05 21:04:56,843:INFO: resetting layer weights
+2021-05-05 21:04:56,983:INFO: training model with 3 workers on 683 vocabulary and 200 features, using sg=0 hs=0 sample=0.001 negative=5 window=5
+2021-05-05 21:04:57,006:INFO: worker thread finished; awaiting finish of 2 more threads
+2021-05-05 21:04:57,009:INFO: worker thread finished; awaiting finish of 1 more threads
+2021-05-05 21:04:57,009:INFO: worker thread finished; awaiting finish of 0 more threads
+2021-05-05 21:04:57,010:INFO: EPOCH - 1 : training on 28806 raw words (14398 effective words) took 0.0s, 661168 effective words/s
+2021-05-05 21:04:57,028:INFO: worker thread finished; awaiting finish of 2 more threads
+2021-05-05 21:04:57,030:INFO: worker thread finished; awaiting finish of 1 more threads
+2021-05-05 21:04:57,033:INFO: worker thread finished; awaiting finish of 0 more threads
+2021-05-05 21:04:57,033:INFO: EPOCH - 2 : training on 28806 raw words (14412 effective words) took 0.0s, 679677 effective words/s
+2021-05-05 21:04:57,053:INFO: worker thread finished; awaiting finish of 2 more threads
+2021-05-05 21:04:57,058:INFO: worker thread finished; awaiting finish of 1 more threads
+2021-05-05 21:04:57,058:INFO: worker thread finished; awaiting finish of 0 more threads
+2021-05-05 21:04:57,059:INFO: EPOCH - 3 : training on 28806 raw words (14398 effective words) took 0.0s, 643777 effective words/s
+2021-05-05 21:04:57,076:INFO: worker thread finished; awaiting finish of 2 more threads
+2021-05-05 21:04:57,079:INFO: worker thread finished; awaiting finish of 1 more threads
+2021-05-05 21:04:57,081:INFO: worker thread finished; awaiting finish of 0 more threads
+2021-05-05 21:04:57,081:INFO: EPOCH - 4 : training on 28806 raw words (14475 effective words) took 0.0s, 722435 effective words/s
+2021-05-05 21:04:57,098:INFO: worker thread finished; awaiting finish of 2 more threads
+2021-05-05 21:04:57,103:INFO: worker thread finished; awaiting finish of 1 more threads
+2021-05-05 21:04:57,104:INFO: worker thread finished; awaiting finish of 0 more threads
+2021-05-05 21:04:57,105:INFO: EPOCH - 5 : training on 28806 raw words (14417 effective words) took 0.0s, 695969 effective words/s
+2021-05-05 21:04:57,105:INFO: training on a 144030 raw words (72100 effective words) took 0.1s, 591584 effective words/s
+2021-05-05 21:04:57,106:WARNING: under 10 jobs per worker: consider setting a smaller `batch_words' for smoother alpha decay
+Word2Vec(vocab=683, size=200, alpha=0.025)
+c:\Users\kaeto\Desktop\weiboF\code\word2vecModel.py:31: DeprecationWarning: Call to deprecated `similarity` (Method will be removed in 4.0.0, use self.wv.similarity() instead).
+  y1 = model.similarity("疫情", "新冠")
+【疫情】和【新冠】的相似度为： 0.9997866
+-----
+
+c:\Users\kaeto\Desktop\weiboF\code\word2vecModel.py:38: DeprecationWarning: Call to deprecated `most_similar` (Method will be removed in 4.0.0, use self.wv.most_similar() instead).
+  y2 = model.most_similar("疫情", topn=20)  # 20个最相关的
+2021-05-05 21:04:57,110:INFO: precomputing L2-norms of word weight vectors
+和【疫情】最相关的词有：
+
+。 0.9999626874923706
+能 0.999962329864502
+我们 0.9999580383300781
+吧 0.9999569654464722
+可以 0.9999563694000244
+就 0.9999545216560364
+不能 0.9999542832374573
+能够 0.9999542236328125
+国家 0.9999538660049438
+的 0.9999527931213379
+病毒 0.9999527931213379
+也 0.9999524354934692
+应该 0.9999520778656006
+有 0.9999520182609558
+这 0.9999513626098633
+希望 0.9999513030052185
+结束 0.999951183795929
+现在 0.9999511241912842
+还是 0.9999494552612305
+不 0.9999493956565857
+-----
+
+医护人员-加油，疫情-
+c:\Users\kaeto\Desktop\weiboF\code\word2vecModel.py:46: DeprecationWarning: Call to deprecated `most_similar` (Method will be removed in 4.0.0, use self.wv.most_similar() instead).
+  y3 =model.most_similar(['疫情', '加油'], ['医护人员'], topn=3)
+武汉 0.9997586011886597
+中国 0.9997374415397644
+！ 0.9997210502624512
+----
+
+c:\Users\kaeto\Desktop\weiboF\code\word2vecModel.py:52: DeprecationWarning: Call to deprecated `doesnt_match` (Method will be removed in 4.0.0, use self.wv.doesnt_match() instead).
+  y4 =model.doesnt_match("医护人员 疫情 新冠 加油".split())
+C:\Users\kaeto\AppData\Local\Programs\Python\Python39\lib\site-packages\gensim\models\keyedvectors.py:877: FutureWarning: arrays to stack must be passed as a "sequence" type such as list or tuple. Support for non-sequence iterables such as generators is deprecated as of NumPy 1.16 and will raise an error in the future.
+  vectors = vstack(self.word_vec(word, use_norm=True) for word in used_words).astype(REAL)
+不合群的词： 加油
+-----
+
+2021-05-05 21:04:57,124:INFO: saving Word2Vec object under model\comments_2.model, separately None
+2021-05-05 21:04:57,124:INFO: not storing attribute vectors_norm
+2021-05-05 21:04:57,125:INFO: not storing attribute cum_table
+2021-05-05 21:04:57,140:INFO: saved model\comments_2.model
